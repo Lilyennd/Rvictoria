@@ -60,14 +60,30 @@
 
 
 # ingresar 3 numeros y mostrar el mayor de los 3
-num1=int(input( "ingrese un numero" ))
-num2=int(input( "ingrese un numero" ))
-num3=int(input( "ingrese un numero" ))
-if num1>num2 and num2>num3:
-   print("el numero mayor es", num1)
-elif num2>num3:
-    print("el numero mayor es", num2 )
-else:
-    print ("el numero mayor es", num3 )
+# num1=int(input( "ingrese un numero" ))
+# num2=int(input( "ingrese un numero" ))
+# num3=int(input( "ingrese un numero" ))
+# if num1>num2 and num2>num3:
+#    print("el numero mayor es", num1)
+# elif num2>num3:
+#     print("el numero mayor es", num2 )
+# else:
+#     print ("el numero mayor es", num3 )
 
-    
+
+# cont=123
+# print ("ingrese su contraseña")
+# pas=int(input())
+# if pas==cont:
+#     print("Holi") 
+# else:
+#     print("contraseña incorrecta")
+
+
+#     print("insgrese un numero")
+#     num=int(input())
+# if num%2==0:
+#     print("su numero es par")
+# else:
+#     print ("su numero es impar")
+
