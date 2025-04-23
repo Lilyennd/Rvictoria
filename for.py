@@ -79,54 +79,71 @@
 #     else:
 #         print ("su numero es impar")
 
-# Algoritmo votos
-# 	Escribir "ingrese un numero de votantes"
-# 	Leer num
-	
-# 	kaiser=0
-# 	nose=0
-	
-# 	Para i<-1 Hasta num Con Paso 1 Hacer
-# 		Escribir "ingrese su voto: Kaiser 1, Nose 2"
-# 		Leer voto
-# 		Si voto==1 Entonces
-# 			kaiser=kaiser+1
-# 		SiNo
-# 			Si voto==2 Entonces
-# 				nose=nose+1
-# 			SiNo
-# 				Escribir "Error, selecione un voto válido"
-# 			Fin Si
-# 		Fin Si
-# 	Fin Para
-# 	Escribir "los votos de Kaiser son ",kaiser
-# 	Escribir "los votos de Nose son ",nose
-# 	Si kaiser>nose Entonces
-# 		Escribir "Gano Kaiser"
-# 	SiNo
-# 		Escribir "Gano Nose"
-# 	Fin Si
-# FinAlgoritmo
-print("Primera candidata Dobby")
-Dobby=0
-print("Segundo candidato Morzat")
-Morzat=0
-Cant=int(input("ingrese cantidad de votantes"))
-for i in range(Cant):
-    voto=int(input("vote 1 por dobby, o 2 por morzat"))
-    if voto==1:
-        Dobby+=1
-    elif voto==2:
-        Morzat+=1
-    else:
-        print("ERROR")
-        print("los votos de dobby son", Dobby)
-        print("los votos de morzat son", Morzat)
-        if Dobby > Morzat:
-            print("Gano Dobby")
-        elif Morzat > Dobby:
-            print("Gano Morzat")
-        else:
-            print("Es un empate")
+
+# hola="chao"
+# for i in hola:
+#     print (i)
+# voc=0
+# wo=input("ingrese una palabra")
+# for i in wo:
+#     if i=="a" or i=="e" or i=="i" or i=="o" or i=="u":
+#         print(i)
+#         voc+=1
+# print("la cantidad de vocales es", voc)
+
+# wo=input("ingrese una palabra")
+# voc=0
+# ca=0
+# co=0
+# for i in wo:
+#     if i.lower() in "aeiou":
+#         voc+=1
+#     elif i!= "aeiou" or " ":
+#         ca+=1   
+# print("la cantidad de vocales es", voc)
+# print("la cantidad de caracteres es", ca)
+
+#numero par - impar con contador
+# cant=int(input("ingrese un numero"))
+# imp=0
+# par=0
+# for i in range(cant):
+#     if (i+1) %2==0:
+#         print(f"el numero {i+1} es par")
+#         par+=1
+#     elif i %2==1:
+#         print(f"el numero {i+1} es par")
+#         imp+=1
+# print(f"la cantidad de numeros pares es {par}")
+# print(f"la cantidad de numeros impares es {imp}")
 
 
+# #supermercado
+# #preguntar al usuario cuantos prductos lleva,
+# #  el listado de 3 productos, 
+# # el total neto de la compra 
+# # el valor con iva
+# cant=int(input("ingrese cantidad e productos:"))
+# total=0
+# for i in range (cant):
+#     print('''
+#         "1.- Diazepam $9000"
+#         "2.- Metametozona $18500"
+#         "3.- Oblea China $1000"
+#         ''')
+#     op=int(input())
+#     if op==1:
+#         print("Usted lleva dIAZEPAM")
+#         total+=9000
+#     elif op==2:
+#         print("usted lleva Metametozona")
+#         total+=18500
+#     elif op==3:
+#         print("usted lleva Oblea China")
+#         total+=1000
+#     else:
+#         print("error")
+
+# print("Su total neto es" , total)
+# print("Su total con iva agregado es" , total*1.19)
+      
