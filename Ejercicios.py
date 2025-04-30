@@ -69,15 +69,67 @@
 #     print(f"gano {j1}")
 
 
-#CREAR UN CAJERO AUTOMATICO
-# TENER EN CUENTA CAJAS DE BILLETES DE 5MIL,10MIL Y 20MIL
-# HAY CAJAS DE 30 BILLETES
-# EL USUARIO INGRESA LA CANTIDAD QUE QUIERE RETIRAR Y VERIFICAR SI HAY BILLETES FUFICIENTES, MOSTRAR SALDO DISPONIBLE
-# 3 USUARIOS CON SU CLAVE CORRESPONDIENTE
-#CADA USUARIO TIENE UNA CLAVE
+# Crear un cajero automatico
+# Tener en cuenta cajas de billetes de 5000 , 10000 y 20000
+# Cada caja tine 30 billetes. Verificar si el monto solicitado
+# Esta disponible en el cajero.Verificar si el monto solicidado
+# es posible por el multiplo de los billetes disponibles
+# Al terminar cada transaccion, debe mostrar saldo Disponible
+# Debe haber 3 usuarios cada uno son su saldo correspondiente
+# Usar clave secreta para iniciar y segun la clave 
+# asociar el saldo disponible
 
 U1= 1123
 U2= 1223
 U3= 1233
-saldo=0
+S1=140000
+S2=280000
+S3=190000
+caja5=30
+caja10=30
+caja20=30
+b20e=0
+b10e=0
+b5e=0
+r=0
+rr=r
 clave=int(input("ingrese su clave"))
+if clave==U1:
+    print(f"su saldo es {S1}")
+elif clave==U2:
+     print(f"su saldo es {S2}")
+elif clave==U3:
+    print(f"su saldo es {S3}")
+else:
+    print("ingrese una clave valida ")
+while caja5>0 and caja10>0 and caja20>0:
+    print('''
+          1.-Retirar dinero
+          2.-Consultar saldo
+          3.-salir
+
+          ''')
+    op=int(input("Selecciones una opcion"))
+    if op==1:
+        print("cuanto dinero desea sacar (solo multiplos de 5)?")
+        r=int(input())
+        if r%5!=0:
+            print("su monto no es valido, intente con un multiplo de 5")
+        while r>=20000 and caja20>0:
+            
+
+            r-=20000
+            caja20-=1
+            b20e+=1
+
+
+  
+  
+  
+        print("Opcion 2 ")
+    elif op==3:
+        print("Opcion salir ")
+        break
+    else:
+        print("Seleccione una opcion válida")
+
