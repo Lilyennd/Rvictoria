@@ -78,28 +78,26 @@
 # Debe haber 3 usuarios cada uno son su saldo correspondiente
 # Usar clave secreta para iniciar y segun la clave 
 # asociar el saldo disponible
-
+saldo=0
 U1= 1123
 U2= 1223
 U3= 1233
-S1=140000
-S2=280000
-S3=190000
+# S1=140000
+# S2=280000
+# S3=190000
 caja5=30
 caja10=30
 caja20=30
 b20e=0
 b10e=0
 b5e=0
-r=0
-rr=r
 clave=int(input("ingrese su clave"))
 if clave==U1:
-    print(f"su saldo es {S1}")
+    saldo=180000
 elif clave==U2:
-     print(f"su saldo es {S2}")
+     saldo=280000
 elif clave==U3:
-    print(f"su saldo es {S3}")
+    saldo=150000
 else:
     print("ingrese una clave valida ")
 while caja5>0 and caja10>0 and caja20>0:
@@ -111,25 +109,34 @@ while caja5>0 and caja10>0 and caja20>0:
           ''')
     op=int(input("Selecciones una opcion"))
     if op==1:
-        print("cuanto dinero desea sacar (solo multiplos de 5)?")
-        r=int(input())
-        if r%5!=0:
+        r=int(input("cuanto dinero desea sacar (solo multiplos de 5)?"))
+        if r>saldo:
+            print("no tiene salso suficiente")
+        while r %5!=0:
             print("su monto no es valido, intente con un multiplo de 5")
-        while r>=20000 and caja20>0:
-            
-
-            r-=20000
+            r=int(input())
+        restante=r
+        while restante>=20000 and caja20>0:
+            restante-=20000
             caja20-=1
             b20e+=1
+        while restante>=10000 and caja10>0:
+            restante-=10000
+            caja10-=1
+            b10e+=1
+        while restante>=50000 and caja5>0:
+            restante-=10000
+            caja5-=1
+            b5e+=1
+        if restante == 0:
+            saldo -= r
+            print("ha retirado con exito el dinero")
+        else:
+            print("no se puede entregar esa cantidad")
+            caja20 += b20e
+            caja10 += b10e
+            caja5 += b5e
+    elif op==2:
+            print(f"su saldo es {saldo}")
 
-
-  
-  
-  
-        print("Opcion 2 ")
-    elif op==3:
-        print("Opcion salir ")
-        break
-    else:
-        print("Seleccione una opcion válida")
 
