@@ -77,67 +77,67 @@
 # Al terminar cada transaccion, debe mostrar saldo Disponible
 # Debe haber 3 usuarios cada uno son su saldo correspondiente
 # Usar clave secreta para iniciar y segun la clave 
-# asociar el saldo disponible
-saldo=0
-U1= 1123
-U2= 1223
-U3= 1233
-# S1=140000
-# S2=280000
-# S3=190000
-caja5=30
-caja10=30
-caja20=30
-b20e=0
-b10e=0
-b5e=0
-clave=int(input("ingrese su clave"))
-if clave==U1:
-    saldo=180000
-elif clave==U2:
-     saldo=280000
-elif clave==U3:
-    saldo=150000
-else:
-    print("ingrese una clave valida ")
-while caja5>0 and caja10>0 and caja20>0:
-    print('''
-          1.-Retirar dinero
-          2.-Consultar saldo
-          3.-salir
+# # asociar el saldo disponible
+# saldo=0
+# U1= 1123
+# U2= 1223
+# U3= 1233
+# # S1=140000
+# # S2=280000
+# # S3=190000
+# caja5=30
+# caja10=30
+# caja20=30
+# b20e=0
+# b10e=0
+# b5e=0
+# clave=int(input("ingrese su clave"))
+# if clave==U1:
+#     saldo=180000
+# elif clave==U2:
+#      saldo=280000
+# elif clave==U3:
+#     saldo=150000
+# else:
+#     print("ingrese una clave valida ")
+# while caja5>0 and caja10>0 and caja20>0:
+#     print('''
+#           1.-Retirar dinero
+#           2.-Consultar saldo
+#           3.-salir
 
-          ''')
-    op=int(input("Selecciones una opcion"))
-    if op==1:
-        r=int(input("cuanto dinero desea sacar (solo multiplos de 5)?"))
-        if r>saldo:
-            print("no tiene salso suficiente")
-        while r %5!=0:
-            print("su monto no es valido, intente con un multiplo de 5")
-            r=int(input())
-        restante=r
-        while restante>=20000 and caja20>0:
-            restante-=20000
-            caja20-=1
-            b20e+=1
-        while restante>=10000 and caja10>0:
-            restante-=10000
-            caja10-=1
-            b10e+=1
-        while restante>=50000 and caja5>0:
-            restante-=10000
-            caja5-=1
-            b5e+=1
-        if restante == 0:
-            saldo -= r
-            print("ha retirado con exito el dinero")
-        else:
-            print("no se puede entregar esa cantidad")
-            caja20 += b20e
-            caja10 += b10e
-            caja5 += b5e
-    elif op==2:
-            print(f"su saldo es {saldo}")
+#           ''')
+#     op=int(input("Selecciones una opcion"))
+#     if op==1:
+#         r=int(input("cuanto dinero desea sacar (solo multiplos de 5)?"))
+#         if r>saldo:
+#             print("no tiene salso suficiente")
+#         while r %5!=0:
+#             print("su monto no es valido, intente con un multiplo de 5")
+#             r=int(input())
+#         restante=r
+#         while restante>=20000 and caja20>0:
+#             restante-=20000
+#             caja20-=1
+#             b20e+=1
+#         while restante>=10000 and caja10>0:
+#             restante-=10000
+#             caja10-=1
+#             b10e+=1
+#         while restante>=50000 and caja5>0:
+#             restante-=10000
+#             caja5-=1
+#             b5e+=1
+#         if restante == 0:
+#             saldo -= r
+#             print("ha retirado con exito el dinero")
+#         else:
+#             print("no se puede entregar esa cantidad")
+#             caja20 += b20e
+#             caja10 += b10e
+#             caja5 += b5e
+#     elif op==2:
+#             print(f"su saldo es {saldo}")
 
 
 
@@ -398,38 +398,41 @@ while caja5>0 and caja10>0 and caja20>0:
 #4,5 y 5: 300 - 5.0 y 6.0:500 - 6.1 y 7.0 : 800
 #agregar puntaje segun carrera
 #tecnico mas +60, ing +40, diplomado +20
-beneficio=0
-prom=0
-c=(int(input("ingrese cantidad de ramos")))
-for i in range (c):
-    materia=(float(input(f"ingrese la nota de la materia {i+1}")))
-    prom+=materia/c
-print("su promedio es",prom)
+# beneficio=0
+# prom=0
+# c=(int(input("ingrese cantidad de ramos")))
+# for i in range (c):
+#     materia=(float(input(f"ingrese la nota de la materia {i+1}")))
+#     prom+=materia/c
+# print("su promedio es",prom)
 
-if prom>4.5 and prom<5.0:
-    print("su beneficio es de ", 300)
-    beneficio+=300
-elif prom>5.1 and prom<6.0:
-    print("su beneficio es de ", 500)
-    beneficio+=500
-elif prom>6.1 and prom<7.0:
-    print("su beneficio es de ", 800)
-    beneficio+=800
-else:
-    print("no posee beneficios")
+# if prom>4.5 and prom<5.0:
+#     print("su beneficio es de ", 300)
+#     beneficio+=300
+# elif prom>5.1 and prom<6.0:
+#     print("su beneficio es de ", 500)
+#     beneficio+=500
+# elif prom>6.1 and prom<7.0:
+#     print("su beneficio es de ", 800)
+#     beneficio+=800
+# else:
+#     print("no posee beneficios")
 
-print("defina su carrera")
-print('''
-      1.tecnico
-      2.ingenieria
-      3.diplomado
-      ''')
-op=int(input())
-if op==1:
-    beneficio+=60
-if op==2:
-    beneficio+=40
-if op==3:
-    beneficio+=20
+# print("defina su carrera")
+# print('''
+#       1.tecnico
+#       2.ingenieria
+#       3.diplomado
+#       ''')
+# op=int(input())
+# if op==1:
+#     beneficio+=60
+# if op==2:
+#     beneficio+=40
+# if op==3:
+#     beneficio+=20
 
-print(f"su beneficio final es de {beneficio}")
+# print(f"su beneficio final es de {beneficio}")
+
+
+# funcion
