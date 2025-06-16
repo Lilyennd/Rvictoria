@@ -1,5 +1,21 @@
 
 import random
+# # op=int(input("seleccione una opcion"))
+# # while True:
+# #     match op:
+# #         case 1:
+# #             print("opcion 1")
+# #         case 2:
+# #             print("opcion 2")
+# #         case 3:
+# #             print("opcion 3")
+# #         case 4:
+# #             print("salir")
+# #             break
+# #         case _:
+# #             print("opcion no valida")
+# #             break
+
 # def arancel():
 #     print("segun el menu eliga la opcion correspondiente a su contexto")
 #     print('''
